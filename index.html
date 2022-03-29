@@ -13,10 +13,13 @@
 <body>
     <div class="image-container">
         <div class="image-title">
-            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828395.png" alt="logo" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" height="64px" viewBox="0 0 24 24" width="64px" fill="#FFFFFF">
+                <path d="M0 0h24v24H0V0z" fill="none" />
+                <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z" />
+            </svg>
             <h2>SuperService.cool</h2>
         </div>
-        <img src="https://source.unsplash.com/random/500x1000/?trees" alt="email background" class="image">
+        <img src="https://source.unsplash.com/random/500x800/?trees" alt="email background" class="image">
     </div>
     <div class="main-container">
         <div class="title">
@@ -29,44 +32,49 @@
 
                 <div class="formrow">
                     <div class="input">
-                        <label for="first-name">First Name</label>
-                        <input type="text" id="first-name">
+                        <label for="first-name">First Name*</label>
+                        <input type="text" placeholder="Alex" id="first-name" pattern="^[-a-zA-Z\u0410-\u044F`]+$" title="Enter your first name" required>
                     </div>
 
                     <div class="input">
-                        <label for="last-name">last name</label>
-                        <input type="text" id="last-name">
+                        <label for="last-name">last name*</label>
+                        <input type="text" placeholder="Alex" pattern="^[-a-zA-Z\u0410-\u044F`]+$" id="last-name" title="Enter your last name" required>
                     </div>
                 </div>
 
                 <div class="formrow">
                     <div class="input">
-                        <label for="email">email</label>
-                        <input type="email" id="email">
+                        <label for="email">Email*</label>
+                        <input type="email" placeholder="Alex" id="email" min="6" required>
                     </div>
 
                     <div class="input">
-                        <label for="number">number</label>
-                        <input type="number" id="number">
+                        <label for="number">Number*</label>
+                        <input type="number" placeholder="+0(987)-654-32-11"
+                            pattern="/\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/" id="number" required>
                     </div>
                 </div>
                 <div class="formrow">
                     <div class="input">
-                        <label for="password">Password</label>
-                        <input type="password" id="password">
+                        <label for="password">Password*</label>
+                        <input type="password" id="password" min="6" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                            title="Password must contain minimum eight characters, at least one letter and one number."
+                            required>
                     </div>
 
                     <div class="input">
-                        <label for="confirm-password">Confirm password</label>
-                        <input type="password" id="confirm-password">
+                        <label for="confirm-password">Confirm password*</label>
+                        <input type="password" id="confirm-password" required>
                     </div>
+                </div>
+                <div class="sumbit-container">
+                    <button type="submit" class="sumbit-button">Create Account</button>
                 </div>
             </form>
-            <button type="submit">Create Account</button>
+
         </div>
-        <footer>
-            <p>Already have an account?</p><a href="">Log in.</a>
-        </footer>
+        <footer>Already have an account? <a href="">Log in</a></footer>
+    </div>
 </body>
 <script src="script.js"></script>
 
