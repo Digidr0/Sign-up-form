@@ -121,3 +121,7 @@ footer>a{
   color: var(--accent-color);
   font-weight: 600;
 }
+
+footer{
+  font-size: 1.3em;
+}
